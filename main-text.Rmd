@@ -1,0 +1,9 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+
+# Main document: Learning about CODAP
+
+It may seem silly (it _is_ silly!) to write about CODAP in R Markdown. The whole point of CODAP, in this context, is to be an alternative to R.
