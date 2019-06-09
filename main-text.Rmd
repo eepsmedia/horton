@@ -3,12 +3,23 @@ output:
   html_document: default
   pdf_document: default
 ---
+```{r, echo=FALSE}
+library("htmltools", lib.loc="/Library/Frameworks/R.framework/Versions/3.5/Resources/library")
+```
 
 # Main document: Learning about CODAP
 
 It may seem silly (it _is_ silly!) to write about CODAP in R Markdown. The whole point of CODAP, in this context, is to be an alternative to R.
 
 ## an introduction to CODAP and motivation for why they should invest some time learning about it
+
+Let's insert HTML
+<<insertHTML:[testR.html]
+
+
+```{r, echo=FALSE}
+htmltools::includeHTML("testR.html")
+```
 
 ## an (interactive?) example that illustrates how useful it is for data science education
 
