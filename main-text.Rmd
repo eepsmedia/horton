@@ -8,4 +8,10 @@ output:
 
 It may seem silly (it _is_ silly!) to write about CODAP in R Markdown. The whole point of CODAP, in this context, is to be an alternative to R.
 
-## What is CODAP?
+## an introduction to CODAP and motivation for why they should invest some time learning about it
+
+## an (interactive?) example that illustrates how useful it is for data science education
+
+## an activity or next step that the reader could undertake
+
+## pointers to some additional next steps
