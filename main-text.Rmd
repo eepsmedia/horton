@@ -13,15 +13,96 @@ It may seem silly (it _is_ silly!) to write about CODAP in R Markdown. The whole
 
 ## an introduction to CODAP and motivation for why they should invest some time learning about it
 
-Let's insert HTML
-<<insertHTML:[testR.html]
-
 
 ```{r, echo=FALSE}
 htmltools::includeHTML("testR.html")
 ```
 
 ## an (interactive?) example that illustrates how useful it is for data science education
+
+Let's give you some experience with CODAP. 
+This won't be a comprehensive course, a "CODAP 101," but you will see how it feels to use a tool like
+this for doing some introductory data science.
+If technology smiles on us, the upcoming illustrations will all be interactive.
+
+Let's begin. In the upcoming "figure," you can see the top of a table, showing column headings. 
+It's a big table, with 1000 cases.
+Each row---each case---is an Californian from the 2013 American Community Survey. 
+We know many things about these people, including their sex, race, and education; and what makes this especially juicy: their total income.
+
+You also see a dot plot showing the income distribution for these people. Do the following:
+
+1. Drag the column heading for **sex** to the vertical axis of the graph. It should split to show two parallel dot plots.
+1. At the right of the graph, notice an icon pallette. These reveal "inspectors." Using the "ruler" inspector, add the median (and anything else you want) to the graph.
+1. With your pointer, hover over the median lines to see the numerical values for medians of male and female incomes. 
+1. To see the difference better, rescale the graph: grab a high value from the **TotalIncome** _axis_ and drag it to the right. 
+
+```{r, echo=FALSE}
+htmltools::includeHTML("acs01.html")
+```
+
+Having done just that much, let's point out a few things.
+
+* The underlying principle for making graphs is "label your axes." The labels come from the table, which is where the data live.
+* The interface makes it easy to make and alter graphs. No syntax, just dragging.
+* We're looking at microdata---data about individuals---and we construct the aggregate measures---in this case, the medians---ourselves. 
+* This is different from the traditional intro-stats situation in several ways. 
+    * You have much more data.
+    * You have more variables than you actually need.
+    * The difference we see (men, in general, have higher total incomes than women) is really obvious; it doesn't require inferential statistical tools to see that it didn't occur by chance. 
+    
+You might rightly say that this is "just" exploratory data analysis: the thing you do before deploying those inferential tools. What makes this more like data science? Let us go further and notice:
+
+* There is something deeply wrong about our comparison. 
+
+I mean, when you hover over the lines to see the values, you should see that the median income for males is 20000 and the median for females is 7500. This is a lamentable gender gap, and in the direction that our stereotypes would predict, but the numbers just don't seem reasonable. 
+
+One problem is that in our data, as one teacher described it, "all the three-year-olds drag the average down." True. Let's see how to address that. In the next figure, we'll start with the medians already calculated, and learn one way (out of several) to _filter_ data in CODAP.
+
+1. We will filter by age; to do that we need a graph of **age**. So make a new graph by clicking the **graph** icon in the toolbar. A new graph appears, with 1000 points---all mixed up.
+1. Make it an age graph by dragging the column heading **Age** to the horizontal axis of the new graph. 
+1. Think about what ages you want to include in your analysis; maybe from about 25 to about 65.
+1. Drag a rectangle around the cases you want to keep. One way is to start high up in the graph above where 25 is. depress the mouse button and drag down and to the right to about 65 on the axis. Notice that the relevant swath of **Age** is selected, and also all of those points in the origibal income graph.
+1. Now a tricky part. Click the title bar of the _table_. (Click the title bar so you don't lose your selection. If you click somewhere else and it goes away, no problem: just re-draw that rectangle.) 
+1. Now, in the "eyeball" palette of the _table_, choose **Set aside unselected cases**.
+
+
+```{r, echo=FALSE}
+htmltools::includeHTML("acs02.html")
+```
+
+Shazam! You have just restricted your analysis to the cases you had previously selected. Check out the values for the medians; they should have changed. They should now be something like 30000 and 20000. Still a big gap, but at least we're not including the kids.
+
+What we just did, _filtering_, is an example of what we call a _data move_. Students generally don't have to do it in intro stats because we instructors and textbook authors pre-digest the data. 
+Why? Because we want students to focus on _t_-tests and sampling distributions, not on deciding which cases to include in an analysis. We also might avoid having students learn stuff like filtering because how you do it depends on your technology, and we want to teach concepts, not the nitty-gritty details of driving some software package.
+
+But in real data analysis (and in data science) deciding what to include is part of the job. And in being a citizen these days, _asking_ what data were included is part of being a critical consumer.
+
+Let's do one more lesson. It's a litttle harder to describe in a blog post, but it demonstrates that, even though a tool like CODAP can't do everything a professional data-science tool can do, it can give students access to other data moves---other ways to organize data for analysis and visualization. 
+
+Suppose we wanted to see those median incomes in a table instead of only as lines on a graph. In the next illustration, we have dragged **Sex** to the left in the table to _promote_ it. We have made the table _hierarchical_, so that at the top level, we have just _Female_ and _Male_, and under each of those top-level headings, we have a table with the values for the individuals in each group. 
+
+The easier way to say that is that we have done a _grouping_ move: we grouped "by **Sex**," and now have two groups, _Female_ and _Male_. 
+
+We have also made a blank, new column _at the top level of the table_ and named it **MedInc**, for median income.
+
+1. To see what we mean by this grouping thing, in the table, click the word `Female`. The table scrolls to the _beginning_ of all the females; the last male is number 304.
+1. Now let's give that new column a formula. Left-click on the column heading, **MedInc**. A menu appears; choose **Edit Formula...**.
+1. Enter `median(TotalIncome)` and press **Apply**. You will notice typeahead in the formula editor. The median incomes should appear.
+
+```{r, echo=FALSE}
+htmltools::includeHTML("acs03.html")
+```
+
+That, in itself, is nice but hardly exciting. We're not done. Strap in.
+
+Suppose we wanted to see if differences in **Education** could explain the sex differences in income.
+
+1.  Drag the column heading for **Education** to the left and drop it next to **Sex**. 
+    Now we have every combination of **Sex** and **Education** as a separate group, and our **MedInc** column computes the median total income _for each group_.
+1. Not only that, but you can treat the aggregate data in the table on the left as you would any data. Drag **Education** to the vertical axis of the graph and **MedInc** to the horizontal axis. You get a graph of the medians. 
+1. The categories are out of order. Drag them up and down to fix that.
+1. Which dot is which sex? Drag **Sex** to the middle of the graph and drop it to create a legend. And weep.
 
 ## an activity or next step that the reader could undertake
 
