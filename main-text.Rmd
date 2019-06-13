@@ -98,12 +98,53 @@ That, in itself, is nice but hardly exciting. We're not done. Strap in.
 
 Suppose we wanted to see if differences in **Education** could explain the sex differences in income.
 
-1.  Drag the column heading for **Education** to the left and drop it next to **Sex**. 
+4.  Drag the column heading for **Education** to the left and drop it next to **Sex**. 
     Now we have every combination of **Sex** and **Education** as a separate group, and our **MedInc** column computes the median total income _for each group_.
 1. Not only that, but you can treat the aggregate data in the table on the left as you would any data. Drag **Education** to the vertical axis of the graph and **MedInc** to the horizontal axis. You get a graph of the medians. 
 1. The categories are out of order. Drag them up and down to fix that.
 1. Which dot is which sex? Drag **Sex** to the middle of the graph and drop it to create a legend. And weep.
 
+You should see that, for this set of data, for any level of education, males in that category have a higher median income than females. Of course, this is "just" exploratory data analysis, and we have not looked very deeply, but we hope you can see how CODAP has let us reveal an intriguing story that was not obvious in our medium-sized data set. It's certainly not the kind of thing you do in intro stats: no tests, no confidence intervals; but some serious data manipulation. 
+
+Let's reflect on the data moves we made:
+
+* We _filtered_ the data to get people in a certain range of ages.
+* We _grouped_ the data by sex and education 
+* We _summarized_ the incomes in each group
+
+Then, of course, we made a graph so we would see the pattern more easily.
+
 ## an activity or next step that the reader could undertake
+
+Suppose you wanted to carry this further. Here is one idea:
+
+You might argue that the comparison is still unfair. More women than men --- even with graduate degrees --- 
+work in the home and do not have traditional incomes. 
+That drags down the graduate women's median income and makes it look as if women _with jobs_ get paid less
+than men, when in fact (one could claim) the incomes are really the same.
+
+Do you think that might be true? Let's find out using data. 
+
+While we're at it, we reveal another wonderful secret:
+The 1000 cases you were working with before were not the only cases (or the only attributes) you have access to.
+The next illustration has a CODAP _data portal_ that has access to a database of 10122 Californians from 2013,
+with many more attributes that you saw last time. 
+
+1. Look in the **options** tab to select what attributes to collect.
+2.  Check under **Basic interesting stuff** and check **Education**
+1.  Check udner **Work and employment** and check **EmplStatus** (employment status)
+1.  Check other attributes you might be interested in
+1.  Edit the "10" cases to be "1000" and click **Get 1000 people**
+1.  To save space, you may want to minimiize the portal itself (labeled ACS) by clicking the minus sign at its upper right.
+
+From before, you know how to filter and make graphs and compute summaries such as the median. See if you can figure out how to select only the employed people and exclude everybody else, then compare males and females (or any other groups) to compare their incomes. 
+
+And if you want to do that in a separate browser window (instead of in the context of this blog post), [use this link](https://codap.concord.org/releases/latest/static/dg/en/cert/index.html#shared=108852).
+
+```{r, echo=FALSE}
+htmltools::includeHTML("acsX01.html")
+```
+
+
 
 ## pointers to some additional next steps
