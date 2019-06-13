@@ -145,7 +145,7 @@ with many more attributes that you saw last time.
 
 From before, you know how to filter and make graphs and compute summaries such as the median. See if you can figure out how to select only the employed people and exclude everybody else, then compare males and females (or any other groups) to compare their incomes. 
 
-If you want more screen space, do this exploration in a separate browser window (instead of in the context of this blog post): [Use this link](https://codap.concord.org/releases/latest/static/dg/en/cert/index.html#shared=108852).
+And if you want to do that in a separate browser window (instead of in the context of this blog post), [use this link](https://codap.concord.org/releases/latest/static/dg/en/cert/index.html#shared=108852).
 
 ```{r, echo=FALSE}
 htmltools::includeHTML("acsX01.html")
