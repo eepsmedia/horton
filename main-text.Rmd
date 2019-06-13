@@ -104,7 +104,11 @@ Suppose we wanted to see if differences in **Education** could explain the sex d
 1. The categories are out of order. Drag them up and down to fix that.
 1. Which dot is which sex? Drag **Sex** to the middle of the graph and drop it to create a legend. And weep.
 
+<<<<<<< HEAD
 You should see that, for this set of data, for any level of education, males in that category have a higher median income than females. 
+=======
+You should see that, for this set of data, for any level of education, males in that category have a higher median income than females. Of course, this is "just" exploratory data analysis, and we have not looked very deeply, but we hope you can see how CODAP has let us reveal an intriguing story that was not obvious in our medium-sized data set. It's certainly not the kind of thing you do in intro stats: no tests, no confidence intervals; but some serious data manipulation. 
+>>>>>>> 53e6f2abad1cd9f3677e129232f564303963aebf
 
 Let's reflect on the data moves we made:
 
@@ -114,8 +118,11 @@ Let's reflect on the data moves we made:
 
 Then, of course, we made a graph so we would see the pattern more easily.
 
+<<<<<<< HEAD
 Of course, this is "just" exploratory data analysis, and we have not looked very deeply, but we hope you can see how CODAP has let us reveal an intriguing story that was not obvious in our medium-sized data set. It's certainly not the kind of thing you do in intro stats: no tests, no confidence intervals; but some serious data manipulation. 
 
+=======
+>>>>>>> 53e6f2abad1cd9f3677e129232f564303963aebf
 ## an activity or next step that the reader could undertake
 
 Suppose you wanted to carry this further. Here is one idea:
@@ -133,19 +140,33 @@ The next illustration has a CODAP _data portal_ that has access to a database of
 with many more attributes that you saw last time. 
 
 1. Look in the **options** tab to select what attributes to collect.
+<<<<<<< HEAD
     * Look under **Basic interesting stuff** and check **Education**
     * Look under **Work and employment** and check **EmplStatus** (employment status)
     * Check other attributes you might be interested in
+=======
+2.  Check under **Basic interesting stuff** and check **Education**
+1.  Check udner **Work and employment** and check **EmplStatus** (employment status)
+1.  Check other attributes you might be interested in
+>>>>>>> 53e6f2abad1cd9f3677e129232f564303963aebf
 1.  Edit the "10" cases to be "1000" and click **Get 1000 people**
 1.  To save space, you may want to minimiize the portal itself (labeled ACS) by clicking the minus sign at its upper right.
 
 From before, you know how to filter and make graphs and compute summaries such as the median. See if you can figure out how to select only the employed people and exclude everybody else, then compare males and females (or any other groups) to compare their incomes. 
 
+<<<<<<< HEAD
 If you want more screen space, do this exploration in a separate browser window (instead of in the context of this blog post): [Use this link](https://codap.concord.org/releases/latest/static/dg/en/cert/index.html#shared=108852).
+=======
+And if you want to do that in a separate browser window (instead of in the context of this blog post), [use this link](https://codap.concord.org/releases/latest/static/dg/en/cert/index.html#shared=108852).
+>>>>>>> 53e6f2abad1cd9f3677e129232f564303963aebf
 
 ```{r, echo=FALSE}
 htmltools::includeHTML("acsX01.html")
 ```
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 53e6f2abad1cd9f3677e129232f564303963aebf
 ## pointers to some additional next steps
