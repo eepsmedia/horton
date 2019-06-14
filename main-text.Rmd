@@ -124,7 +124,7 @@ Of course, this is "just" exploratory data analysis, and we have not looked very
 
 Suppose you wanted to carry this further. Here is one idea:
 
-You might argue that the comparison is still unfair. More women than men --- even with graduate degrees --- 
+You might argue that the comparison is still unfair. More women than men --- even women with graduate degrees --- 
 work in the home and do not have traditional incomes. 
 That drags down the graduate women's median income and makes it look as if women _with jobs_ get paid less
 than men, when in fact (one could claim) the incomes are really the same.
@@ -136,16 +136,21 @@ The 1000 cases you were working with before were not the only cases (or the only
 The next illustration has a CODAP _data portal_ that has access to a database of 10122 Californians from 2013,
 with many more attributes that you saw last time. 
 
-1. Look in the **options** tab to select what attributes to collect.
+1. Look in the **options** tab to choose which attributes to collect.
     * Look under **Basic interesting stuff** and check **Education**
     * Look under **Work and employment** and check **EmplStatus** (employment status)
     * Check other attributes you might be interested in
 1.  Edit the "10" cases to be "1000" and click **Get 1000 people**
-1.  To save space, you may want to minimiize the portal itself (labeled ACS) by clicking the minus sign at its upper right.
 
-From before, you know how to filter and make graphs and compute summaries such as the median. See if you can figure out how to select only the employed people and exclude everybody else, then compare males and females (or any other groups) to compare their incomes. 
+From before, you know how to filter and make graphs and compute summaries such as the median. 
 
-And if you want to do that in a separate browser window (instead of in the context of this blog post), [use this link](https://codap.concord.org/releases/latest/static/dg/en/cert/index.html#shared=108852).
+3. See if you can figure out how to select only the employed people and exclude everybody else, then compare males and females (or any other groups) to compare their incomes. 
+
+Oh: our window in this blog is small, so you will probably run out of screen space. Two strategies:
+
+* Minimize the portal itself (labeled ACS) by clicking the minus sign at its upper right.
+* Open the file in a separate browser window. [Use this link](https://codap.concord.org/releases/latest/static/dg/en/cert/index.html#shared=108852).
+
 
 ```{r, echo=FALSE}
 htmltools::includeHTML("acsX01.html")
