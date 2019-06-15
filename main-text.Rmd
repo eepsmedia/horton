@@ -4,19 +4,23 @@ output:
   pdf_document: default
 ---
 ```{r, echo=FALSE}
-library("htmltools", lib.loc="/Library/Frameworks/R.framework/Versions/3.5/Resources/library")
+#library("htmltools", lib.loc="/Library/Frameworks/R.framework/Versions/3.5/Resources/library")
+library("htmltools", lib.loc="/Users/bfinzer/Library/R/3.4/library")
 ```
 
-# Main document: Learning about CODAP
+# About the Common Online Data Analysis Platform (CODAP)
 
-It may seem silly (it _is_ silly!) to write about CODAP in R Markdown. The whole point of CODAP, in this context, is to be an alternative to R.
+We've been designing "point-and-click" data software since the early 90's. From the beginning, though, we wanted to get beyond "point-and-click" to a user experience of data immersion. (William Gibson's 1984 cyberpunk novel _Neuromancer_ and its "cyberspace" was very much on our minds.) We strove for a tool/learning environment that would draw learners into data, encouraging a drive to question and explore. Truth to tell, we remain in that striving place today.
 
-## an introduction to CODAP and motivation for why they should invest some time learning about it
+## Why bother with CODAP in an Intro Data Science course?
 
+Well, it depends on what you want your students' early experiences with data science to be. How quickly do you want them to become engaged with data? How adept are they with technical challenges? Will programmer-style tools pose no significant obstacles, or will some students who might later turn out to be gifted at data science be put off and give up prematurely? We think that for many students a programming-free on-ramp such as CODAP can take them to the heart of doing data science where they can discover just how exciting and fun it can be to work with data. Programming will likely prove essential later on when the limits and shortcomings of a data immersion environment become apparent.
 
-```{r, echo=FALSE}
-htmltools::includeHTML("testR.html")
-```
+There are a few things about CODAP that make it especially easy to use for a course:
+
+* It's free, runs in a browser, and doesn't require an account or login.
+* CODAP documents can be saved on your computer or in Google Drive.
+* It's simple to create a shared link for a document that you can share with students. Clicking the link opens an individual copy of the document right in CODAP.
 
 ## An interactive example
 
