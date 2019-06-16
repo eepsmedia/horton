@@ -4,8 +4,8 @@ output:
   pdf_document: default
 ---
 ```{r, echo=FALSE}
-#library("htmltools", lib.loc="/Library/Frameworks/R.framework/Versions/3.5/Resources/library")
-library("htmltools", lib.loc="/Users/bfinzer/Library/R/3.4/library")
+library("htmltools", lib.loc="/Library/Frameworks/R.framework/Versions/3.5/Resources/library")
+#library("htmltools", lib.loc="/Users/bfinzer/Library/R/3.4/library")
 ```
 
 # About the Common Online Data Analysis Platform (CODAP)
@@ -14,13 +14,17 @@ We've been designing "point-and-click" data software since the early 90's. From 
 
 ## Why bother with CODAP in an Intro Data Science course?
 
-Well, it depends on what you want your students' early experiences with data science to be. How quickly do you want them to become engaged with data? How adept are they with technical challenges? Will programmer-style tools pose no significant obstacles, or will some students who might later turn out to be gifted at data science be put off and give up prematurely? We think that for many students a programming-free on-ramp such as CODAP can take them to the heart of doing data science where they can discover just how exciting and fun it can be to work with data. Programming will likely prove essential later on when the limits and shortcomings of a data immersion environment become apparent.
+Well, it depends on what you want your students' early experiences with data science to be. How quickly do you want them to become engaged with data? How adept are they with technical challenges? Will programmer-style tools pose no significant obstacles, or will some students who might later turn out to be gifted at data science be put off and give up prematurely? We think that for many students a programming-free on-ramp such as CODAP can take them to the heart of doing data science where they can discover just how exciting and fun it can be. Programming will likely prove essential later on when the limits and shortcomings of a data immersion environment become apparent.
 
 There are a few things about CODAP that make it especially easy to use for a course:
 
 * It's free, runs in a browser, and doesn't require an account or login.
+* There are example documents, including one that leads you through the basics. And a **Help** link takes you to tutorial videos and other documentation.
 * CODAP documents can be saved on your computer or in Google Drive.
-* It's simple to create a shared link for a document that you can share with students. Clicking the link opens an individual copy of the document right in CODAP.
+* It's simple to create a shared link for a document that you can share with students. Clicking the link opens an individual copy of the document right in CODAP. Each invocation produces a separate, independent copy. Students can easily use the same method to share their work with each other or the instructor.
+* There are many ways to get data into CODAP, the simplest being to drag a CSV file into CODAP's browser window.
+
+[Here](codap.concord.org) is a link to CODAP's home page, but we hope you'll hang in with us for some examples.
 
 ## An interactive example
 
@@ -160,4 +164,12 @@ Oh: our window in this blog is small, so you will probably run out of screen spa
 htmltools::includeHTML("acsX01.html")
 ```
 
-## pointers to some additional next steps
+## Additional resources
+
+* [Here](codap.concord.org) again is that link to CODAP's home page.
+* Take a look at Tim's [A Best Case Scenario](https://bestcase.wordpress.com) blog for interesting CODAP examples along with Data Science Education ruminations.
+* [CODAP Data Interactive Plugins](https://concord-consortium.github.io/codap-data-interactives/) extend its functionality with portals to data, simulations that produce data and data munging capabilities.
+* Post questions at [The CODAP Help Forum](https://codap.concord.org/forums/forum/test/).
+* Visit CODAP's github repository for [latest release notes](https://github.com/concord-consortium/codap/wiki/Release-Notes), [documentation on how to create your own plugins](https://github.com/concord-consortium/codap/wiki/Getting-Started-With-CODAP-Plugins), and, of course the complete, open source, [code for CODAP](https://github.com/concord-consortium/codap).
+
+And if you try CODAP with a class, let us ([Bill](mailto:wfinzer@concord.org) and [Tim](mailto:eepsmedia@gmail.com)) know!
