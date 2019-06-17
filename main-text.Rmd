@@ -112,11 +112,7 @@ Suppose we wanted to see if differences in **Education** could explain the sex d
 1. The categories are out of order. Drag them up and down to fix that.
 1. Which dot is which sex? Drag **Sex** to the middle of the graph and drop it to create a legend. And weep.
 
-<<<<<<< HEAD
-You should see that, for this set of data, for any level of education, males in that category have a higher median income than females. 
-=======
 You should see that, for this set of data, for any level of education, males in that category have a higher median income than females. Of course, this is "just" exploratory data analysis, and we have not looked very deeply, but we hope you can see how CODAP has let us reveal an intriguing story that was not obvious in our medium-sized data set. It's certainly not the kind of thing you do in intro stats: no tests, no confidence intervals; but some serious data manipulation. 
->>>>>>> 53e6f2abad1cd9f3677e129232f564303963aebf
 
 Let's reflect on the data moves we made:
 
@@ -128,7 +124,7 @@ Then, of course, we made a graph so we would see the pattern more easily.
 
 Of course, this is "just" exploratory data analysis, and we have not looked very deeply, but we hope you can see how CODAP has let us reveal an intriguing story that was not obvious in our medium-sized data set. It's certainly not the kind of thing you do in intro stats: no tests, no confidence intervals; but some serious data manipulation. 
 
-## an activity or next step that the reader could undertake
+## What? You want more??
 
 Suppose you wanted to carry this further. Here is one idea:
 
