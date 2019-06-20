@@ -14,36 +14,38 @@ We've been designing "point-and-click" data software since the early 90's. From 
 
 ## Why bother with CODAP in an Intro Data Science course?
 
-Well, it depends on what you want your students' early experiences with data science to be. How quickly do you want them to become engaged with data? How adept are they with technical challenges? Will programmer-style tools pose no significant obstacles, or will some students who might later turn out to be gifted at data science be put off and give up prematurely? We think that for many students a programming-free on-ramp such as CODAP can take them to the heart of doing data science where they can discover just how exciting and fun it can be. Programming will likely prove essential later on when the limits and shortcomings of a data immersion environment become apparent.
+It depends on your students and what you want their early experiences with data science to be. How quickly do you want them to become engaged with data? How adept are they with technical challenges? Will programmer-style tools pose no significant obstacles, or will some students who might later turn out to be gifted at data science be put off and give up prematurely? We think that for many students a programming-free on-ramp such as CODAP can take them to the heart of doing data science where they can discover how exciting and fun it can be. Programming will likely prove essential later on when the limits and shortcomings of a data immersion environment become apparent.
 
 There are a few things about CODAP that make it especially easy to use for a course:
 
 * It's free, runs in a browser, and doesn't require an account or login.
 * There are example documents, including one that leads you through the basics. And a **Help** link takes you to tutorial videos and other documentation.
 * CODAP documents can be saved on your computer or in Google Drive.
-* It's simple to create a shared link for a document that you can share with students. Clicking the link opens an individual copy of the document right in CODAP. Each invocation produces a separate, independent copy. Students can easily use the same method to share their work with each other or with the instructor.
+* It's simple to create a link for a document that you can share with students. Clicking the link opens an individual copy of the document right in CODAP. Each invocation produces a separate, independent copy. Students can easily use the same method to share their work with each other or with the instructor.
 * There are many ways to get data into CODAP, the simplest being to drag a CSV file into CODAP's browser window.
 
-[Here](https://codap.concord.org) is a link to CODAP's home page, but we hope you'll hang in with us for some examples.
+[Here is a link](https://codap.concord.org) to CODAP's home page, but we hope you'll hang in with us for some examples.
 
 ## An interactive example
 
 Let's give you some experience with CODAP. 
 This won't be a comprehensive course, a "CODAP 101," but you will see how it feels to use a tool like
-this for doing some introductory data science.
+this for doing introductory data science.
 If technology smiles on us, the upcoming illustrations will all be interactive.
+
+### Trying out the basics
 
 Let's begin. In the upcoming "figure," you can see the top of a table, showing column headings. 
 It's a big table, with 1000 cases.
 Each row---each case---is an Californian from the 2013 American Community Survey. 
 We know many things about these people, including their sex, race, and education; and what makes this especially juicy: their total income.
 
-You also see a dot plot showing the income distribution for these people. Do the following:
+You should also see a dot plot showing the income distribution for these people. Do the following:
 
 1. Drag the column heading for **sex** to the vertical axis of the graph. It should split to show two parallel dot plots.
 1. At the right of the graph, notice an icon pallette. These reveal "inspectors." Using the "ruler" inspector, add the median (and anything else you want) to the graph.
-1. With your pointer, hover over the median lines to see the numerical values for medians of male and female incomes. 
-1. To see the difference better, rescale the graph: grab a high value from the **TotalIncome** _axis_ and drag it to the right. 
+1. With your pointer, hover over the median lines to see the numerical values of median incomes for males and females. 
+1. To see the difference better, rescale the graph: grab a high number from the **TotalIncome** _axis_ (e.g., 400000) and drag it to the right. 
 
 ```{r, echo=FALSE}
 htmltools::includeHTML("acs01.html")
@@ -59,6 +61,8 @@ Having done just that much, let's point out a few things.
     * You have more variables than you actually need.
     * The difference we see (men, in general, have higher total incomes than women) is really obvious; it doesn't require inferential statistical tools to see that it didn't occur by chance. 
     
+### Filtering: not your grandmother's EDA
+    
 You might rightly say that this is "just" exploratory data analysis: the thing you do before deploying those inferential tools. What makes this more like data science? Let us go further and notice:
 
 * There is something deeply wrong about our comparison. 
@@ -70,7 +74,7 @@ One problem is that in our data, as one teacher described it, "all the three-yea
 1. We will filter by age; to do that we need a graph of **age**. So make a new graph by clicking the **graph** icon in the toolbar. A new graph appears, with 1000 points---all mixed up.
 1. Make it an age graph by dragging the column heading **Age** to the horizontal axis of the new graph. 
 1. Think about what ages you want to include in your analysis; maybe from about 25 to about 65.
-1. Drag a rectangle around the cases you want to keep. One way is to start high up in the graph above where 25 is. depress the mouse button and drag down and to the right to about 65 on the axis. Notice that the relevant swath of **Age** is selected, and also all of those points in the origibal income graph.
+1. Drag a rectangle around the cases you want to keep. One way is to start high up in the graph above where 25 is. depress the mouse button and drag _diagonally_, down and to the right, to about 65 on the axis. Notice that the relevant swath of **Age** is selected, and also all of those points in the original income graph.
 1. Now a tricky part. Click the title bar of the _table_. (Click the title bar so you don't lose your selection. If you click somewhere else and it goes away, no problem: just re-draw that rectangle.) 
 1. Now, in the "eyeball" palette of the _table_, choose **Set aside unselected cases**.
 
@@ -82,9 +86,11 @@ htmltools::includeHTML("acs02.html")
 Shazam! You have just restricted your analysis to the cases you had previously selected. Check out the values for the medians; they should have changed. They should now be something like 30000 and 20000. Still a big gap, but at least we're not including the kids.
 
 What we just did, _filtering_, is an example of what we call a _data move_. Students generally don't have to do it in intro stats because we instructors and textbook authors pre-digest the data. 
-Why? Because we want students to focus on _t_-tests and sampling distributions, not on deciding which cases to include in an analysis. We also might avoid having students learn stuff like filtering because how you do it depends on your technology, and we want to teach concepts, not the nitty-gritty details of driving some software package.
+Why? It's probably because we want students to focus on _t_-tests and sampling distributions, not on deciding which cases to include in an analysis. We also might avoid having students learn stuff like filtering because how you do it depends on your technology, and we want to teach concepts, not the nitty-gritty details of driving some software package. 
 
-But in real data analysis (and in data science) deciding what to include is part of the job. And in being a citizen these days, _asking_ what data were included is part of being a critical consumer.
+That reasoning is getting weaker. In real data analysis (and in data science), deciding what to include is part of the job. And in being a citizen these days, _asking_ what data were included is part of being a critical consumer of data.
+
+### Grouping, hierarchy, and aggregate measures
 
 Let's do one more lesson. It's a litttle harder to describe in a blog post, but it demonstrates that, even though a tool like CODAP can't do everything a professional data-science tool can do, it can give students access to other data moves---other ways to organize data for analysis and visualization. 
 
@@ -112,24 +118,23 @@ Suppose we wanted to see if differences in **Education** could explain the sex d
 1. The categories are out of order. Drag them up and down to fix that.
 1. Which dot is which sex? Drag **Sex** to the middle of the graph and drop it to create a legend. And weep.
 
-You should see that, for this set of data, for any level of education, males in that category have a higher median income than females. Of course, this is "just" exploratory data analysis, and we have not looked very deeply, but we hope you can see how CODAP has let us reveal an intriguing story that was not obvious in our medium-sized data set. It's certainly not the kind of thing you do in intro stats: no tests, no confidence intervals; but some serious data manipulation. 
+You should see that, for this set of data, for any level of education, males in that category have a higher median income than females.
 
 Let's reflect on the data moves we made:
 
 * We _filtered_ the data to get people in a certain range of ages.
 * We _grouped_ the data by sex and education 
-* We _summarized_ the incomes in each group
+* We _summarized_ the incomes in each group by computing the median
 
 Then, of course, we made a graph so we would see the pattern more easily.
 
-Of course, this is "just" exploratory data analysis, and we have not looked very deeply, but we hope you can see how CODAP has let us reveal an intriguing story that was not obvious in our medium-sized data set. It's certainly not the kind of thing you do in intro stats: no tests, no confidence intervals; but some serious data manipulation. 
+Of course, this is "just" exploratory data analysis, and we have not looked very deeply, but we hope you can see how CODAP helped us reveal an intriguing story that was not obvious in our medium-sized dataset. It's certainly not the kind of thing you do in intro stats: no tests, no confidence intervals; but some serious data manipulation. 
 
 ## What? You want more??
 
 Suppose you wanted to carry this further. Here is one idea:
 
-You might argue that the comparison is still unfair. More women than men --- even women with graduate degrees --- 
-work in the home and do not have traditional incomes. 
+You might argue that the comparison is still unfair. More women than men---even women with graduate degrees---work in the home and do not have traditional incomes. 
 That drags down the graduate women's median income and makes it look as if women _with jobs_ get paid less
 than men, when in fact (one could claim) the incomes are really the same.
 
@@ -137,7 +142,7 @@ Do you think that might be true? Let's find out using data.
 
 While we're at it, we reveal another wonderful secret:
 The 1000 cases you were working with before were not the only cases (or the only attributes) you have access to.
-The next illustration has a CODAP _data portal_ that has access to a database of 10122 Californians from 2013,
+The next illustration has a CODAP _plugin_, a data portal that connects to a database of 10122 Californians from 2013,
 with many more attributes that you saw last time. 
 
 1. Look in the **options** tab to choose which attributes to collect.
