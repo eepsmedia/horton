@@ -10,7 +10,7 @@ library("htmltools", lib.loc="/Library/Frameworks/R.framework/Versions/3.5/Resou
 
 # About the Common Online Data Analysis Platform (CODAP)
 
-We've been designing "point-and-click" data software since the early 90's. From the beginning, though, we wanted to get beyond "point-and-click" to a user experience of data immersion. (William Gibson's 1984 cyberpunk novel _Neuromancer_ and its "cyberspace" was very much on our minds.) We strove for a tool/learning environment that would draw learners into data, encouraging a drive to question and explore. Truth to tell, we remain in that striving place today.
+We've been designing "point-and-click" data software since the early 90's. From the beginning, though, we wanted to get beyond "point-and-click" to a user experience of data immersion. (William Gibson's 1984 cyberpunk novel _Neuromancer_ and its "cyberspace" both inspired and eluded us.) We strove for a tool/learning environment that would draw learners into data, encouraging a drive to question and explore. Truth to tell, we remain in that striving place today.
 
 ## Why bother with CODAP in an Intro Data Science course?
 
@@ -21,10 +21,10 @@ There are a few things about CODAP that make it especially easy to use for a cou
 * It's free, runs in a browser, and doesn't require an account or login.
 * There are example documents, including one that leads you through the basics. And a **Help** link takes you to tutorial videos and other documentation.
 * CODAP documents can be saved on your computer or in Google Drive.
-* It's simple to create a shared link for a document that you can share with students. Clicking the link opens an individual copy of the document right in CODAP. Each invocation produces a separate, independent copy. Students can easily use the same method to share their work with each other or the instructor.
+* It's simple to create a shared link for a document that you can share with students. Clicking the link opens an individual copy of the document right in CODAP. Each invocation produces a separate, independent copy. Students can easily use the same method to share their work with each other or with the instructor.
 * There are many ways to get data into CODAP, the simplest being to drag a CSV file into CODAP's browser window.
 
-[Here](codap.concord.org) is a link to CODAP's home page, but we hope you'll hang in with us for some examples.
+[Here](https://codap.concord.org) is a link to CODAP's home page, but we hope you'll hang in with us for some examples.
 
 ## An interactive example
 
@@ -162,9 +162,10 @@ htmltools::includeHTML("acsX01.html")
 
 ## Additional resources
 
-* [Here](codap.concord.org) again is that link to CODAP's home page.
+* [Here](https://codap.concord.org) again is that link to CODAP's home page.
 * Take a look at Tim's [A Best Case Scenario](https://bestcase.wordpress.com) blog for interesting CODAP examples along with Data Science Education ruminations.
 * [CODAP Data Interactive Plugins](https://concord-consortium.github.io/codap-data-interactives/) extend its functionality with portals to data, simulations that produce data and data munging capabilities.
+* Tim has some cool plugin examples at [codap.xyz](http://codap.xyz). There's even a tutorial for creating plugins.
 * Post questions at [The CODAP Help Forum](https://codap.concord.org/forums/forum/test/).
 * Visit CODAP's github repository for [latest release notes](https://github.com/concord-consortium/codap/wiki/Release-Notes), [documentation on how to create your own plugins](https://github.com/concord-consortium/codap/wiki/Getting-Started-With-CODAP-Plugins), and, of course the complete, open source, [code for CODAP](https://github.com/concord-consortium/codap).
 
